@@ -29,7 +29,7 @@ require_once "logique.php";
       <div class="container-xl">
         <div class="row justify-content-between align-items-center">
           <div class="col-md-3 col-4">
-            <a href="http://localhost/TeaCoffee/"> Tea Or Coffee</a>
+            <a href="http://localhost/PhpProceduraleCours/TeaCoffee/"> Tea Or Coffee</a>
           </div>
           <div class="col-lg-9 col-md-4 col-8 text-end">
             <ul class="d-flex m-3 justify-content-end">
@@ -44,24 +44,22 @@ require_once "logique.php";
     <!-- fin nav -->
 
     <div class="container m-auto">
-      <form class="row  p-5 mt-5 border rounded">
+      <form class="row  p-5 mt-5 border rounded " method="get">
         <ul class="d-flex justify-content-between align-item-center m-auto w-auto">
           <li class="btn btn-warning m-3 ">
-            <a href="http://localhost/TeaCoffee/?coffee" name="coffee">
+            <a href="http://localhost/PhpProceduraleCours/TeaCoffee/?coffee" name="coffee">
               Coffee</a
             >
           </li>
           <li class="btn btn-danger m-3 ">
-            <a href="http://localhost/TeaCoffee/?tea"> Tea</a>
+            <a href="http://localhost/PhpProceduraleCours/TeaCoffee/?tea"> Tea</a>
           </li>
 
           <?php
           
           if($isLoggedIn) {
-            
-          
             echo '<li class="btn btn-danger m-3">
-            <a href="http://localhost/TeaCoffee/?grog"> Grog</a></li>';
+            <a href="http://localhost/PhpProceduraleCours/TeaCoffee/?grog"> Grog</a></li>';
 
           }
           

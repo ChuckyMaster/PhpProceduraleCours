@@ -2,10 +2,6 @@ ul li {
   list-style: none;
 }
 
-body {
-  background-color: pink;
-}
-
 .container {
   font-family: "Roboto", sans-serif;
   display: flex;
