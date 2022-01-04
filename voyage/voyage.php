@@ -38,7 +38,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand logo" href="#">Travel</a>
+        <a class="navbar-brand logo" href="index.php">Travel</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -94,18 +94,28 @@
 
     <!-- FIN NAV -->
 
-    <!-- CONTAINER SPLIT EN DEUX -->
-
     <div class="container-fluid">
       <div class="row d-flex justify-content-center">
         <!-- PARTIE FORM  -->
-        <div class="col-6 main-left bg-primary d-flex">
-          <div class="container d-flex justify-content-center">
+        <div class="col-6 main-left d-flex">
+          <div class="container border m-3 d-flex justify-content-center">
             <div class="row d-flex ">
-              <div class="col-12 d-flex justify-content-center  ">
+              <div class="col-12 d-flex  ">
 
               <!-- debut balise form method post -->
-                <form action="" method="post" class="justify-content-center text-center ">
+              <?php if($isLoggedIn) { ?>
+
+                   <!-- LOGOUT  -->
+                   <form method="post" class="form-group justify-content-center text-center ">
+              <button class="btn btn-info" name="logout"> Logout</button>
+                </form>
+
+
+
+                <?php } else{ ?>
+
+                  <form action="" method="post" 
+                class="justify-content-center text-center ">
                   <div class="form-group ">
                     <label class="form-label mt-4">Login</label>
                     <div class="form-floating mb-3">
@@ -128,15 +138,12 @@
                     </div>
                   </div>
                   <button type="submit" class="btn btn-dark m-2"> Log </button>
+
                 </form>
 
-
-
-
-                <!-- LOGOUT  -->
-                <form method="post">
-              <button class="btn btn-info" name="logout"> Logout</button>
-                </form>
+                  <?php  } ?>
+                
+              
               </div>
             </div>
           </div>
@@ -146,11 +153,11 @@
 
         <!-- 
         PARTIE AFFICHAGE DROITE -->
-        <div class="col-6 main-right bg-dark">
-          <div class="container">
+        <div class="col-6 main-right">
+          <div class="container border m-3">
             <div class="row d-flex">
               <div class="col-12 justify-content-center">
-                <h2 class="m-5 text-primary justify-content-center text-center">
+                <h2 class="m-5 text-secondary justify-content-center text-center">
               Travel all around the world
                 </h2>
               </div>
@@ -159,8 +166,6 @@
         </div>
       </div>
     </div>
-
-    <!-- FIN DU PREMIER CONTAINER -->
 
     <!-- AFFICHAGE PRINCIPALE -->
 
@@ -178,7 +183,13 @@
               <?php 
 
 $voyage;
+    if(isset($_GET['destination'])){
+      foreach($voyages as $unVoyage)
 
+      if($unVoyage['destination'] == $_GET['destination']){
+        $voyage = $unVoyage;
+      }
+    }
            
               
 

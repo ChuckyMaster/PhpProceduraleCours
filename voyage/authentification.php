@@ -35,6 +35,7 @@ $users = [
 
 //  VERIF CONNECTION
 
+// LOGIN
 if(isset($_POST['username']) && isset($_POST['password'])){
     $pwdInput = $_POST['password'];
     $userInput = $_POST['username'];

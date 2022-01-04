@@ -38,7 +38,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand logo" href="#">Travel</a>
+        <a class="navbar-brand logo" href="index.php">Travel</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -105,7 +105,19 @@
               <div class="col-12 d-flex  ">
 
               <!-- debut balise form method post -->
-                <form action="" method="post" class="justify-content-center text-center ">
+              <?php if($isLoggedIn) { ?>
+
+                   <!-- LOGOUT  -->
+                   <form method="post" class="form-group justify-content-center text-center ">
+              <button class="btn btn-info" name="logout"> Logout</button>
+                </form>
+
+
+
+                <?php } else{ ?>
+
+                  <form action="" method="post" 
+                class="justify-content-center text-center ">
                   <div class="form-group ">
                     <label class="form-label mt-4">Login</label>
                     <div class="form-floating mb-3">
@@ -128,11 +140,12 @@
                     </div>
                   </div>
                   <button type="submit" class="btn btn-dark m-2"> Log </button>
+
                 </form>
-                 <!-- LOGOUT  -->
-                 <form method="post">
-              <button class="btn btn-info" name="logout"> Logout</button>
-                </form>
+
+                  <?php  } ?>
+                
+              
               </div>
             </div>
           </div>
@@ -192,7 +205,15 @@
                     <p class="card-text">
                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias magnam corrupti saepe voluptatem et voluptatum!
                     </p>
-                    <form  ><a href="voyage.php" class="btn btn-primary"  name=" <?=$voyage['destination'] ?>">Choose</a></form>
+                    
+
+
+                      <a href="voyage.php?destination=<?=$voyage['destination'] ?>" 
+                      class="btn btn-primary"  
+                      >Choose</a>
+
+                      
+                   
                     
                   </div>
                 </div>
