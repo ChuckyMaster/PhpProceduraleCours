@@ -57,7 +57,7 @@ require_once "logique.php";
 
           <?php
           
-          if($isLoggedIn) {
+          if($isLoggedIn ) {
             echo '<li class="btn btn-danger m-3">
             <a href="http://localhost/PhpProceduraleCours/TeaCoffee/?grog"> Grog</a></li>';
 
@@ -80,7 +80,7 @@ require_once "logique.php";
 
       <div class="container">
         <div class="row d-flex">
-          <div class="col-12   align-item-center">
+          <div class="col-12   align-item-center justify-content-center p-2">
             <?= $pageContent ?>
           </div>
         </div>

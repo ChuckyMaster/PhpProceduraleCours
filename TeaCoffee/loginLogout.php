@@ -12,13 +12,14 @@
     } else {
         $formLog = ' 
         
-<form method="post" ><input  type="submit" name="logout" value="Logout" class="btn btn-secondary justify-content-center mt-3
+<form method="post" action="index.php">
+<input  type="submit" name="logout" value="Logout" class="btn btn-secondary justify-content-center mt-3
 " /> </form>
         
         ';
     
     }
-var_dump($isLoggedIn);
+
    
 
 
