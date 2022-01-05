@@ -36,7 +36,7 @@
   <body>
     <!-- NAVBAR -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand logo" href="index.php">Travel</a>
         <button
@@ -100,7 +100,7 @@
       <div class="row d-flex justify-content-center">
         <!-- PARTIE FORM  -->
         <div class="col-6 main-left d-flex">
-          <div class="container border m-3 d-flex justify-content-center">
+          <div class="container border d-flex justify-content-center">
             <div class="row d-flex ">
               <div class="col-12 d-flex  ">
 
@@ -108,8 +108,11 @@
               <?php if($isLoggedIn) { ?>
 
                    <!-- LOGOUT  -->
-                   <form method="post" class="form-group justify-content-center text-center ">
-              <button class="btn btn-info" name="logout"> Logout</button>
+                   <form method="post" class="justify-content-center text-center ">
+
+                  <div class="form-group"> <button class="btn btn-info" name="logout"> Logout</button></div>
+
+              
                 </form>
 
 
@@ -156,7 +159,7 @@
         <!-- 
         PARTIE AFFICHAGE DROITE -->
         <div class="col-6 main-right">
-          <div class="container border m-3">
+          <div class="container border">
             <div class="row d-flex">
               <div class="col-12 justify-content-center">
                 <h2 class="m-5 text-secondary justify-content-center text-center">

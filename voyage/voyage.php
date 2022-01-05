@@ -36,7 +36,7 @@
   <body>
     <!-- NAVBAR -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg ">
       <div class="container-fluid">
         <a class="navbar-brand logo" href="index.php">Travel</a>
         <button
